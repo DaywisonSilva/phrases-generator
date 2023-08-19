@@ -1,10 +1,11 @@
-import Button from './components/Button'
+import './style/style.css'
+
+import Card from './components/Card'
 
 const App = () => {
   return (
     <>
-      <h1>App</h1>
-      <Button>Texto qualquer</Button>
+      <Card />
     </>
   )
 }
