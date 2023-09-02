@@ -1,6 +1,8 @@
 .card {
   width: 90%;
-  padding: 28px;
+  padding: 20px;
+  padding-bottom: 30px;
+  position: relative;
   background-color: hsl(217, 19%, 38%);
   border-radius: 20px;
 }
@@ -10,4 +12,26 @@
   font-size: 24px;
   font-family: sans-serif;
   text-align: center;
+}
+
+.frase {
+  color: hsl(150, 100%, 66%);
+  font-size: 14px;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.icon {
+  position: absolute;
+  padding: 10px;
+  background-color: hsl(150, 100%, 66%);
+  border-radius: 50%;
+  overflow: visible;
+  left: calc(50% - 22px);
+  bottom: -22px;
 }
