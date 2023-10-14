@@ -1,35 +1,21 @@
 import Style from './style.module.css'
+import P from 'prop-types'
 import Icon from '../../assets/images/icon-dice.svg'
-import { useState, useEffect } from 'react'
 
-const Card = () => {
-  const [advice, setAdvice] = useState(
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Accusantium voluptatem rerum velit libero, sed voluptatum labore porroid.'
-  )
-  const [adviceId, setAdviceId] = useState(0)
-
-  const fetchData = () => {
-    fetch('https://api.adviceslip.com/advice')
-      .then((res) => {
-        return res.json()
-      })
-      .then((data) => {
-        setAdvice(data.slip.advice)
-        setAdviceId(data.slip.id)
-      })
-  }
-
-  useEffect(() => {
-    fetchData()
-  }, [])
-
+const Card = ({ advice, adviceId, onChange }) => {
   return (
     <div className={Style.card}>
       <p className={Style.frase}>frase #{adviceId}</p>
       <p className={Style.text}>&quot;{advice}&quot;</p>
-      <img src={Icon} alt='Icon' className={Style.icon} onClick={fetchData} />
+      <img src={Icon} alt='Icon' className={Style.icon} onClick={onChange} />
     </div>
   )
+}
+
+Card.propTypes = {
+  advice: P.string,
+  adviceId: P.string,
+  onChange: P.func
 }
 
 export default Card

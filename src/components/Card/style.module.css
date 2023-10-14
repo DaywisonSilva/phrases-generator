@@ -1,11 +1,18 @@
 .card {
   width: 90%;
+  max-width: 400px;
   padding: 20px;
   padding-bottom: 30px;
   position: relative;
   background-color: hsl(217, 19%, 38%);
   border-radius: 20px;
 }
+
+/* @media screen and (min-width: 500px) {
+  .card {
+    width: 450px;
+  }
+} */
 
 .text {
   color: white;
